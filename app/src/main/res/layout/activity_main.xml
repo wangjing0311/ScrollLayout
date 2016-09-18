@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/outer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#f00"
+                android:gravity="center"
+                android:text="header"
+                android:textColor="#fff" />
+
+            <RadioGroup
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/item1"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="200"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="tab1"
+                    android:textColor="@drawable/tabcolor" />
+
+                <RadioButton
+                    android:id="@+id/item2"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="200"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="tab2"
+                    android:textColor="@drawable/tabcolor" />
+
+                <RadioButton
+                    android:id="@+id/item3"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="200"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="tab3"
+                    android:textColor="@drawable/tabcolor" />
+
+                <RadioButton
+                    android:id="@+id/item4"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="200"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="tab4"
+                    android:textColor="@drawable/tabcolor" />
+            </RadioGroup>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#ccc" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

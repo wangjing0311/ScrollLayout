@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".wjdemo.WjMainActivity">
+
+    <com.example.akazam.scrolltest.wjdemo.ScrollLayout
+        android:id="@+id/wj_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/wj_topview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffff0000">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="软件介绍"
+                android:textColor="@android:color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/wj_tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#FF00FF00"
+            app:tabTextAppearance="@style/MyTabLayoutTextAppearance" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/wj_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </com.example.akazam.scrolltest.wjdemo.ScrollLayout>
+</RelativeLayout>
